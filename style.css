@@ -1,0 +1,32 @@
+input {
+    height: 30px;
+    width: 30px;
+    border: solid 1px black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+#player_1 {
+
+}
+
+#player_2{
+    
+}
+
+.jogo {
+    display: inline-flex;
+    width: 100%
+}
+
+.vs {
+    margin-inline: 50px;
+}
+
+.valores {
+    display: none;
+}

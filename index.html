@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pedra, Papel, Tesoura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Pedra, Papel, Tesoura</h1>
+
+    <div class="jogo">
+        <div id="player_1">
+            <input id='r1' onclick="alterarE1('pedra')" type="image" value="pedra" src="https://cdn-icons-png.flaticon.com/512/1888/1888343.png"></input>
+            <input id='p1' onclick="alterarE1('papel')" type="image" value="papel" src="https://cdn.icon-icons.com/icons2/37/PNG/512/paper_3714.png"></input>
+            <input id='s1' onclick="alterarE1('tesoura')" type="image" value="tesoura" src="https://cdn-icons-png.flaticon.com/512/4229/4229057.png"></input>
+            <h2>Vitórias:</h2>
+            <h2 id="v1">0</h2>
+        </div>
+        <h2 class="vs">VS</h2>
+        <div id="player_2">
+            <input id='r2' onclick="alterarE2('pedra')" type="image" src="https://cdn-icons-png.flaticon.com/512/1888/1888343.png"></input>
+            <input id='p2' onclick="alterarE2('papel')" type="image" src="https://cdn.icon-icons.com/icons2/37/PNG/512/paper_3714.png"></input>
+            <input id='s2' onclick="alterarE2('tesoura')" type="image" src="https://cdn-icons-png.flaticon.com/512/4229/4229057.png"></input>
+            <h2>Vitórias:</h2>
+            <h2 id="v2">0</h2>
+        </div>
+    </div>
+
+    <h2>Empates:</h2>
+    <h2 id="v0">0</h2>
+
+    <div class="valores">
+        <p id="valor_e1"></p>
+        <p id="valor_e2"></p>
+    </div>
+
+    <button onclick="validar(document.getElementById('valor_e1').innerHTML, document.getElementById('valor_e2').innerHTML, parseInt(document.getElementById('v1').innerHTML), parseInt(document.getElementById('v2').innerHTML), parseInt(document.getElementById('v0').innerHTML))">JOGAR!</button>
+
+</body>
+<script src="index.js"></script>
+</html>
