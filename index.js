@@ -1,3 +1,11 @@
+function chamarValidar(e1, e2){
+    if(e1 != "" && e2 != ""){
+        validar(document.getElementById('valor_e1').innerHTML, document.getElementById('valor_e2').innerHTML, parseInt(document.getElementById('v1').innerHTML), parseInt(document.getElementById('v2').innerHTML), parseInt(document.getElementById('v0').innerHTML))
+        document.getElementById('valor_e1').innerHTML = ''
+        document.getElementById('valor_e2').innerHTML = ''
+    }
+};
+
 document.addEventListener("keypress", function(e){
     var r1 = document.getElementById('r1')
     var r2 = document.getElementById('r2')
@@ -10,11 +18,10 @@ document.addEventListener("keypress", function(e){
 
     var e1 = document.getElementById('valor_e1')
     var e2 = document.getElementById('valor_e2')
-    
+
     var qtd1 = parseInt(document.getElementById('v1').innerHTML)
     var qtd2 = parseInt(document.getElementById('v2').innerHTML)
     var qtd0 = parseInt(document.getElementById('v0').innerHTML)
-
 
     if(e.key == "1") {
         e1.innerHTML = 'pedra'
@@ -55,30 +62,52 @@ document.addEventListener("keypress", function(e){
     if(e.key == "Enter") {
         validar(e1.innerHTML, e2.innerHTML, qtd1, qtd2, qtd0)
     };
+    chamarValidar(e1.innerHTML, e2.innerHTML);
 });
 
 function validar(e1, e2, qtd1, qtd2, qtd0){
 
     if(e1 == e2){
         qtd0++
+        document.getElementById('v0').style.color = 'green';
+        document.getElementById('v1').style.color = 'black';
+        document.getElementById('v2').style.color = 'black';
     }
     if(e1 == 'pedra' && e2 =='papel'){
         qtd2++
+        document.getElementById('v2').style.color = 'green';
+        document.getElementById('v1').style.color = 'black';
+        document.getElementById('v0').style.color = 'black';
     }
     if(e1 == 'pedra' && e2 =='tesoura'){
         qtd1++
+        document.getElementById('v1').style.color = 'green';
+        document.getElementById('v0').style.color = 'black';
+        document.getElementById('v2').style.color = 'black';
     }
     if(e1 == 'papel' && e2 =='pedra'){
         qtd1++
+        document.getElementById('v1').style.color = 'green';
+        document.getElementById('v0').style.color = 'black';
+        document.getElementById('v2').style.color = 'black';
     }
     if(e1 == 'papel' && e2 =='tesoura'){
         qtd2++
+        document.getElementById('v2').style.color = 'green';
+        document.getElementById('v1').style.color = 'black';
+        document.getElementById('v0').style.color = 'black';
     }
     if(e1 == 'tesoura' && e2 =='pedra'){
         qtd2++
+        document.getElementById('v2').style.color = 'green';
+        document.getElementById('v1').style.color = 'black';
+        document.getElementById('v0').style.color = 'black';
     }
     if(e1 == 'tesoura' && e2 =='papel'){
         qtd1++
+        document.getElementById('v1').style.color = 'green';
+        document.getElementById('v0').style.color = 'black';
+        document.getElementById('v2').style.color = 'black';
     }
 
     document.getElementById('v1').innerHTML = qtd1

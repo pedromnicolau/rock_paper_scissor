@@ -1,30 +1,59 @@
-input {
-    height: 30px;
-    width: 30px;
-    border: solid 1px black;
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title {
+    text-align: center;
+}
+
+.btn_escolha {
+    margin-top: 50px;
+    height: 50px;
+    width: 50px;
+    border: solid 1px rgb(138, 138, 138);
     padding: 10px;
     border-radius: 10px;
+    background-color: rgb(255, 255, 255);
 }
 
 input:hover {
     background-color: rgb(220, 220, 220);
 }
 
-#player_1 {
+.nickname1 {
+    margin-left: 10px;
+    text-align: left;
+}
 
+.nickname2 {
+    margin-right: 10px;
+    text-align: right;
+}
+
+#player_1 {
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    float: left;
+    background-color: rgb(86, 159, 255);
 }
 
 #player_2{
-    
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    background-color: rgb(255, 110, 110);
+    float: right;
 }
 
-.jogo {
-    display: inline-flex;
-    width: 100%
-}
-
-.vs {
-    margin-inline: 50px;
+.empate {
+    border: solid 1px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .valores {
