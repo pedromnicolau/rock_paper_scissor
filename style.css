@@ -7,28 +7,33 @@ body {
     text-align: center;
 }
 
-.btn_escolha {
+.btn_choice {
     margin-top: 50px;
+    margin-inline: 10px;
     height: 50px;
     width: 50px;
     border: solid 1px rgb(138, 138, 138);
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
+    transition: all 0.32s ease;
 }
 
-input:hover {
+.btn_choice:hover {
+    transform: translateY(-5px);
     background-color: rgb(220, 220, 220);
 }
 
-.nickname1 {
+#nickname_1 {
     margin-left: 10px;
     text-align: left;
+    cursor: pointer;
 }
 
-.nickname2 {
+#nickname_2 {
     margin-right: 10px;
     text-align: right;
+    cursor: pointer;
 }
 
 #player_1 {
@@ -47,7 +52,7 @@ input:hover {
     float: right;
 }
 
-.empate {
+.tie {
     border: solid 1px black;
     display: flex;
     flex-direction: row;
@@ -56,6 +61,20 @@ input:hover {
     text-align: center;
 }
 
-.valores {
+.values {
     display: none;
+}
+
+.rules{
+    text-align: center;
+}
+
+#rules{
+    display: none;
+}
+
+#btn_rules{
+    padding:10px;
+    border-radius: 10px;
+    margin-top: 10px;
 }

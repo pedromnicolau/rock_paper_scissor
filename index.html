@@ -9,18 +9,81 @@
     <h1 class="title">PEDRA, PAPEL, TESOURA</h1>
 
     <div id="player_1">
+        <p onclick="setNickName(1)" id="nickname_1">Player 1</p>
+        <input class="btn_choice" id='rock_1' onclick="changeValue('rock','1')" type="image" src="https://cdn-icons-png.flaticon.com/512/1888/1888343.png"></input>
+        <input class="btn_choice" id='paper_1' onclick="changeValue('paper','1')" type="image" src="https://cdn.icon-icons.com/icons2/37/PNG/512/paper_3714.png"></input>
+        <input class="btn_choice" id='scissor_1' onclick="changeValue('scissor','1')" type="image" src="https://cdn-icons-png.flaticon.com/512/4229/4229057.png"></input>
+        <h2>Vitórias:</h2>
+        <h2 id="qtd_victories_1">0</h2>
+    </div>
+    <div id="player_2">
+        <p onclick="setNickName(2)" id="nickname_2">Player 2</p>
+        <input class="btn_choice" id='rock_2' onclick="changeValue('rock', '2')" type="image" src="https://cdn-icons-png.flaticon.com/512/1888/1888343.png"></input>
+        <input class="btn_choice" id='paper_2' onclick="changeValue('paper', '2')" type="image" src="https://cdn.icon-icons.com/icons2/37/PNG/512/paper_3714.png"></input>
+        <input class="btn_choice" id='scissor_2' onclick="changeValue('scissor', '2')" type="image" src="https://cdn-icons-png.flaticon.com/512/4229/4229057.png"></input>
+        <h2>Vitórias:</h2>
+        <h2 id="qtd_victories_2">0</h2>
+    </div>
+
+    <div class="tie">
+        <h2>Empates:</h2>
+        <h2 id="qtd_ties">0</h2>
+    </div>
+
+    <div class = 'rules'>
+        <button id="btn_rules" value="0" onclick="showRules()">Mostrar regras</button>
+        <p id="rules">
+            Pressione as seguintes teclas para selecionar as seguintes escolhas:<br><br>
+            Player 1:<br>
+            '1' = rock<br>
+            '2' = paper<br>
+            '3' = scissor<br>
+            <br>
+            Player 2:<br>
+            '7' = rock<br>
+            '8' = paper<br>
+            '9' = scissor<br><br>
+            Clicar com o mouse nas opções escolhidas também funciona.<br><br>
+            Automaticamente o sistema identificará o ganhador.<br><br>
+        </p>
+
+
+    </div>
+
+    <div class="values">
+        <p id="value_1"></p>
+        <p id="value_2"></p>
+    </div>
+
+</body>
+<script src="index.js"></script>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Pedra, Papel, Tesoura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="title">PEDRA, PAPEL, TESOURA</h1>
+
+    <div id="player_1">
         <p class="nickname1">Player 1</p>
-        <input class="btn_escolha" id='r1' onclick="alterarE1('pedra')" type="image" value="pedra" src="https://cdn-icons-png.flaticon.com/512/1888/1888343.png"></input>
-        <input class="btn_escolha" id='p1' onclick="alterarE1('papel')" type="image" value="papel" src="https://cdn.icon-icons.com/icons2/37/PNG/512/paper_3714.png"></input>
-        <input class="btn_escolha" id='s1' onclick="alterarE1('tesoura')" type="image" value="tesoura" src="https://cdn-icons-png.flaticon.com/512/4229/4229057.png"></input>
+        <input class="btn_escolha" id='r1' onclick="escolher('pedra','1')" type="image" value="pedra" src="https://cdn-icons-png.flaticon.com/512/1888/1888343.png"></input>
+        <input class="btn_escolha" id='p1' onclick="escolher('papel','1')" type="image" value="papel" src="https://cdn.icon-icons.com/icons2/37/PNG/512/paper_3714.png"></input>
+        <input class="btn_escolha" id='s1' onclick="escolher('tesoura','1')" type="image" value="tesoura" src="https://cdn-icons-png.flaticon.com/512/4229/4229057.png"></input>
         <h2>Vitórias:</h2>
         <h2 id="v1">0</h2>
     </div>
     <div id="player_2">
         <p class="nickname2">Player 2</p>
-        <input class="btn_escolha" id='r2' onclick="alterarE2('pedra')" type="image" src="https://cdn-icons-png.flaticon.com/512/1888/1888343.png"></input>
-        <input class="btn_escolha" id='p2' onclick="alterarE2('papel')" type="image" src="https://cdn.icon-icons.com/icons2/37/PNG/512/paper_3714.png"></input>
-        <input class="btn_escolha" id='s2' onclick="alterarE2('tesoura')" type="image" src="https://cdn-icons-png.flaticon.com/512/4229/4229057.png"></input>
+        <input class="btn_escolha" id='r2' onclick="escolher('pedra', '2')" type="image" src="https://cdn-icons-png.flaticon.com/512/1888/1888343.png"></input>
+        <input class="btn_escolha" id='p2' onclick="escolher('papel', '2')" type="image" src="https://cdn.icon-icons.com/icons2/37/PNG/512/paper_3714.png"></input>
+        <input class="btn_escolha" id='s2' onclick="escolher('tesoura', '2')" type="image" src="https://cdn-icons-png.flaticon.com/512/4229/4229057.png"></input>
         <h2>Vitórias:</h2>
         <h2 id="v2">0</h2>
     </div>
@@ -36,4 +99,4 @@
 
 </body>
 <script src="index.js"></script>
-</html>
+</html> -->
