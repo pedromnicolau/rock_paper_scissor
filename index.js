@@ -1,3 +1,23 @@
+function openModal(){
+    var modal = document.getElementById("modal_rules");
+    var btn = document.getElementById("btn_rules");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+        }
+        
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
 function setNickName(x){
 
     if(x == 1){
@@ -130,98 +150,3 @@ function clearAll(){
 
 
  }
-
-
-// document.addEventListener("keypress", function(e){
-//     switch(e.key) {
-//         case '1':
-//             escolher('pedra',1);
-//             break;
-//         case '2':
-//             escolher('papel',1);
-//             break;
-//         case '3':
-//             escolher('tesoura',1);
-//             break;
-//         case '7':
-//             escolher('pedra',2);
-//             break;
-//         case '8':
-//             escolher('papel',2);
-//             break;
-//         case '9':
-//             escolher('tesoura',2);
-//             break;                            
-//         }
-// });
-
-// function escolher(choice, player) {
-//     document.getElementById('valor_e' + player).innerHTML = choice
-
-//     document.getElementById('rock' + player).style.backgroundColor = (choice == 'pedra' ? 'gray' : 'white')
-//     document.getElementById('paper' + player).style.backgroundColor = (choice == 'papel' ? 'gray' : 'white')
-//     document.getElementById('s' + player).style.backgroundColor = (choice == 'tesoura' ? 'gray' : 'white')
-
-//     playGame();
-// };
-
-// function playGame() {
-//     var qtd0 = 0, qtd1 = 0, qtd2 = 0;
-    
-//     var escolha1 = document.getElementById('valor_e1').innerHTML
-//     var escolha2 = document.getElementById('valor_e2').innerHTML
-
-//     if(escolha1 == "" || escolha2 == "")
-//         return;      
-
-//     if(escolha1 == escolha2) {
-//         qtd0++
-//         pintarPontos('v0');
-//     }
-//     else if((escolha1 == 'pedra' && escolha2 == 'tesoura') || (escolha1 == 'papel' && escolha2 == 'pedra') || (escolha1 == 'tesoura' && escolha2 == 'papel')){
-//         qtd1++
-//         pintarPontos('v1');
-//     }
-//     else{
-//         qtd2++
-//         pintarPontos('v2');
-//     }
-    
-//     setarPontos(qtd0, qtd1, qtd2);
-//     limparEscolhas();  
-// }
-
-// function limparEscolhas(){
-//     document.getElementById('valor_e1').innerHTML = ""
-//     document.getElementById('valor_e2').innerHTML = ""
-    
-//     setTimeout(function(){
-//         pintarBotoes('white')
-//     }, 500);      
-// }
-
-// function setarPontos(qtd0, qtd1, qtd2) {
-//     qtd0 += parseInt(document.getElementById('v0').innerHTML)    
-//     qtd1 += parseInt(document.getElementById('v1').innerHTML)
-//     qtd2 += parseInt(document.getElementById('v2').innerHTML)
-
-//     document.getElementById('v0').innerHTML = qtd0
-//     document.getElementById('v1').innerHTML = qtd1
-//     document.getElementById('v2').innerHTML = qtd2
-// }
-
-// function pintarPontos(id) {
-//     document.getElementById('v0').style.color = 'black';
-//     document.getElementById('v1').style.color = 'black';
-//     document.getElementById('v2').style.color = 'black';
-
-//     document.getElementById(id).style.color = 'green';
-// }
-
-// function pintarBotoes(cor) {    
-//     botoes = document.getElementsByClassName('btn_escolha')
-
-//     for (let i = 0; i < botoes.length; i++) {
-//         botoes[i].style.backgroundColor = cor;
-//     };
-// }

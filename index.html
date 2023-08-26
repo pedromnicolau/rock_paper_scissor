@@ -30,23 +30,22 @@
         <h2 id="qtd_ties">0</h2>
     </div>
 
-    <div class = 'rules'>
-        <button id="btn_rules" value="0" onclick="showRules()">Mostrar regras</button>
-        <p id="rules">
-            Pressione as seguintes teclas para selecionar as seguintes escolhas:<br><br>
-            Player 1:<br>
-            '1' = rock<br>
-            '2' = paper<br>
-            '3' = scissor<br>
-            <br>
-            Player 2:<br>
-            '7' = rock<br>
-            '8' = paper<br>
-            '9' = scissor<br><br>
-            Clicar com o mouse nas opções escolhidas também funciona.<br><br>
-            Automaticamente o sistema identificará o ganhador.<br><br>
-        </p>
+    <div class="center">
+        <button id="btn_rules" value="0" onclick="openModal()">Mostrar regras</button>
+    </div>
 
+    <!-- The Modal -->
+    <div id="modal_rules" class="modal">
+
+    <!-- Modal content -->
+    <div class="rules">
+        <span class="close">&times;</span>
+        <h2>Regras do jogo</h2>
+        <p>1- Clique em cima dos nomes ("Player 1" e "Player 2") para mudar seu nickname</p><br>
+        <p>2- Player 1: selecione a telca "1" para pedra, "2" para papel, e "3" para tesoura.</p><br>
+        <p>Player 2: selecione a telca "7" para pedra, "8" para papel, e "9" para tesoura.</p><br>
+        <p>3- O sistema identificará automaticamente o ganhador e exibirá o resultado na tela</p>
+    </div>
 
     </div>
 
