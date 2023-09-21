@@ -1,1 +1,3 @@
-"# rock_paper_scissor" 
+## Pedra Papel e Tesoura
+
+### Projeto didático para aprender sobre algoritmo
